@@ -1,0 +1,156 @@
+/**
+ * @name Elaina Theme
+ * @author gn027c
+ * @version -
+ * @description topic "Elaina"
+ * @source https://github.com/IshiiAinari
+ * @invite NKzJuGadmv
+ * @website https://linktr.ee/gn027c
+ * @authorId 914870154079391746
+*/
+
+@import url('https://maendisease.github.io/Solana/Solana.css');
+@import url('https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css');
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css');
+@import url('https://maendisease.github.io/BetterDiscordStuff/Themes/Solana/addon/mac-titlebar.css');
+/* @import url('https://raw.githubusercontent.com/24adamcho/Hide-Guilds-BetterDiscord/main/Hide-guilds.theme.css'); */
+/* @import url('https://gist.githubusercontent.com/cheesits456/eebc5eadbd87f7c1195c7fec9d9bfaf0/raw/3caf6b3dd9ce1404e47f13af54c164a150eef0aa/AutoHideMembers.theme.css'); */
+
+
+/* - - - - [ SOLANA THEME ] - - - - */
+:root {
+  --accent-hue: 213;
+  --accent-saturation: 30%;
+  --accent-brightness: 30%;
+  --background-accent-hue: 213;
+  --background-accent-saturation: 100%;
+  --background-accent-brightness: 50%;
+  --background-image: url('https://i.imgur.com/9D757kf.jpg');
+  --background-image-position: center;
+  --background-image-size: cover;
+  --background-image-blur: 0px;
+  --background-overlay-opacity: 80%;
+  --background-overlay-color-lightness: -0.5;
+  --background-hue-shift-strength: 100%;
+  --window-background-image: url('https://i.pinimg.com/originals/40/bc/bb/40bcbbcd2e1906ae5bef45a0a7132455.gif');
+  --window-background-image-position: center;
+  --window-background-image-size: cover;
+  --window-background-image-attachment: local;
+  --window-opacity: 95%;
+  --window-blur: 0;
+  --window-friends-blur: 0;
+  --window-margin: 20;
+  --window-margin-left: 5;
+  --window-border-radius: 1%;
+  --window-background-lightness: -0.2;
+  --window-accent-tint-strength: 5%;
+  --chat-bubble: 0;
+  --text-link-hue: 213;
+  --chat-text-brightness: 0;
+  --home-icon: url('https://media.tenor.com/lNkVGL4mLDAAAAAC/elaina-nod.gif');
+  --favorites-icon: url('https://i.imgur.com/tOBGQ8g.jpg');
+  --dock-blur: 0; 
+  --dock-border-radius: -0.4;
+  --sidebar-width: 230px;
+  --members-width: 400px;
+  --sidebar-text-brightness: 0.1;
+  --background-floating-blur: 20px;
+  --floating-background-lightness: 0;
+  --background-floating-opacity: 1;
+  --enable-floating-transparency: 1;
+  --custom-font-display: "";
+  --custom-font-regular: "";
+  --custom-font-primary: "";
+  --custom-font-code: "";
+  --enable-blur: 0;
+}
+
+/* - - - - [ SERVERCOLUNMNS THEME ] - - - - */
+:root {
+	--columns:   1;   /* default:	3	  */
+	--guildsize: 45;	/* default:	50	*/		
+	--guildgap:  5;	  /* default:	3		*/
+	--aligndms:  1;	  /* default:	0		*/
+}
+
+
+/* - - - - [ AUTOHIDEMEMEBRSLIST THEME ] - - - - */
+.chatContent-3KubbW {
+  max-width: calc(100% - 60px);
+  transition: max-width 0.5s; 
+}
+
+.title-31SJ6t {
+  z-index: 11;
+}
+
+.members-3WRCEx,
+.membersWrap-3NUR2t {
+  border-radius: 20px 0 0 20px !important;
+  transition-duration: 500ms;
+  transition-property: box-shadow, min-width, width;
+  min-width: 60px;
+  width: 60px;
+  z-index: 10;
+  background-color: rgba(29, 30, 33, 0.433);
+}
+
+.members-3WRCEx:hover,
+.membersWrap-3NUR2t:hover {
+  min-width: 240px;
+  width: 240px;
+}
+
+.members-3WRCEx:not(:hover),
+.membersWrap-3NUR2t:not(:hover) {
+  min-width: 60px;
+  width: 60px;
+  transition-delay: 1s;
+}
+
+.membersWrap-3NUR2t {
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+.membersWrap-3NUR2t:hover {
+  box-shadow: 0 0 20px 10px #262626;
+}
+
+.membersGroup-2eiWxl {
+  height: 0;
+  transition-duration: 500ms;
+  transition-property: height;
+}
+
+.members-3WRCEx:hover .membersGroup-2eiWxl {
+  transition-delay: 100ms;
+  height: 40px;
+}
+
+.members-3WRCEx:not(:hover) .membersGroup-2eiWxl {
+  transition-delay: 1.4s;
+  height: 0px;
+}
+
+/* - - - - [ ANIMATIONGUILDS THEME ] - - - - */
+
+.guilds-2JjMmN {
+  opacity: 0.6;
+  transform-origin: left center; 
+  transform: scale(0.98); 
+}
+
+.guilds-2JjMmN:hover {
+  opacity: 1;
+  transform: scale(1); 
+  transform-origin: center center;
+}
+
+.guilds-2JjMmN:not(:hover) {
+  transition-delay: 3s;
+  transform: scale(0.98); 
+  opacity: 0.6;
+}
