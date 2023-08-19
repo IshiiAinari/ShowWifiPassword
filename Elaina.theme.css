@@ -10,13 +10,14 @@
 */
 
 @import url('https://maendisease.github.io/Solana/Solana.css');
+@import url('https://discordstyles.github.io/SoftX/RadialGlow.css');
 @import url('https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css');
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css');
 @import url('https://maendisease.github.io/BetterDiscordStuff/Themes/Solana/addon/mac-titlebar.css');
+@import url("https://raw.githubusercontent.com/DiscordStyles/RadialStatus/deploy/RadialStatus.theme.css");
 /* @import url('https://raw.githubusercontent.com/24adamcho/Hide-Guilds-BetterDiscord/main/Hide-guilds.theme.css'); */
 /* @import url('https://gist.githubusercontent.com/cheesits456/eebc5eadbd87f7c1195c7fec9d9bfaf0/raw/3caf6b3dd9ce1404e47f13af54c164a150eef0aa/AutoHideMembers.theme.css'); */
-
 
 /* - - - - [ SOLANA THEME ] - - - - */
 :root {
@@ -40,8 +41,8 @@
   --window-opacity: 95%;
   --window-blur: 0;
   --window-friends-blur: 0;
-  --window-margin: 20;
-  --window-margin-left: 5;
+  --window-margin: 30;
+  --window-margin-left: 10;
   --window-border-radius: 1%;
   --window-background-lightness: -0.2;
   --window-accent-tint-strength: 5%;
@@ -66,12 +67,16 @@
   --enable-blur: 0;
 }
 
+.accountProfileCard-lbN7n- .avatar-3mTjvZ {
+  transform: translate(5px, -93px);
+}
+
 /* - - - - [ SERVERCOLUNMNS THEME ] - - - - */
 :root {
-	--columns:   1;   /* default:	3	  */
-	--guildsize: 45;	/* default:	50	*/		
-	--guildgap:  5;	  /* default:	3		*/
-	--aligndms:  1;	  /* default:	0		*/
+	--columns:   1;   /* default:	3  */
+	--guildsize: 45;  /* default:	50 */		
+	--guildgap:  5;	  /* default:	3  */
+	--aligndms:  1;	  /* default:	0  */
 }
 
 
@@ -87,11 +92,11 @@
 
 .members-3WRCEx,
 .membersWrap-3NUR2t {
-  border-radius: 20px 0 0 20px !important;
+  border-radius: 12px 0 0 6px !important;
   transition-duration: 500ms;
   transition-property: box-shadow, min-width, width;
-  min-width: 60px;
-  width: 60px;
+  min-width: 20px;
+  width: 20px;
   z-index: 10;
   background-color: rgba(29, 30, 33, 0.433);
 }
@@ -116,7 +121,7 @@
 }
 
 .membersWrap-3NUR2t:hover {
-  box-shadow: 0 0 20px 10px #262626;
+  box-shadow: 0 0 20px 10px rgba(16, 17, 21, 0.433);
 }
 
 .membersGroup-2eiWxl {
@@ -140,17 +145,22 @@
 .guilds-2JjMmN {
   opacity: 0.6;
   transform-origin: left center; 
-  transform: scale(0.98); 
+  transform: scale(0.9); 
+  margin-left: -6px;
+  margin-right: 6px;
 }
 
 .guilds-2JjMmN:hover {
   opacity: 1;
-  transform: scale(1); 
+  transition: 100ms;
+  transform: scale(0.94); 
   transform-origin: center center;
 }
 
 .guilds-2JjMmN:not(:hover) {
-  transition-delay: 3s;
-  transform: scale(0.98); 
   opacity: 0.6;
+  transition: 100ms;
+  transition-delay: 3s;
+  transform: scale(0.9); 
+  margin-left: -6px;
 }
