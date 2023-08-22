@@ -1,25 +1,35 @@
-/**
- * @name Elaina Theme
- * @author gn027c
- * @version -
- * @description topic "Elaina"
- * @source https://github.com/IshiiAinari
- * @invite NKzJuGadmv
- * @website https://linktr.ee/gn027c
- * @authorId 914870154079391746
-*/
+/* ╔═[🟢🔴🟡]═══════════════════════════════════════════════════════════════════════════════════════════[🟣]═╗ */
+/* ║                                                ELAINA THEME                                               ║ */
+/* ╠══════════════════════════╦════════════════════════════════════════════════════════════════════════════════╣ */
+/* ║ Author:                  ║ gn027c#0 (Ishii Ainari)         <914870154079391746>                           ║ */
+/* ║ Source:                  ║ https://github.com/IshiiAinari  <1.0.4>                                        ║ */
+/* ║ Website:                 ║ https://linktr.ee/gn027c                                                       ║ */
+/* ╠══════════════════════════╬════════════════════════════════════════════════════════════════════════════════╣ */
+/* ║      N                   ║ Đây là theme với "Elaina" Topic, được rewrite từ Solana Theme.                 ║ */
+/* ║         O   T            ║ Bạn có thể tùy chỉnh giá trị theo ý muốn ở phía dưới, bật/tắt các giá trị có   ║ */
+/* ║                E         ║ sẵn bằng cách xóa/thêm những */ /* trước và sau của nó.                        ║ */
+/* ╚══════════════════════════╩════════════════════════════════════════════════════════════════════════════════╝ */
+
+
+
+/* ╔═══════════════════════════════╗ */
+/* ║            IMPORT             ║ */
+/* ╚═══════════════════════════════╝ */
 
 @import url('https://maendisease.github.io/Solana/Solana.css');
-@import url('https://discordstyles.github.io/SoftX/RadialGlow.css');
+@import url("https://nyri4.github.io/Discolored/support/discolored.theme.css");
 @import url('https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css');
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css');
 @import url('https://maendisease.github.io/BetterDiscordStuff/Themes/Solana/addon/mac-titlebar.css');
 @import url("https://raw.githubusercontent.com/DiscordStyles/RadialStatus/deploy/RadialStatus.theme.css");
-/* @import url('https://raw.githubusercontent.com/24adamcho/Hide-Guilds-BetterDiscord/main/Hide-guilds.theme.css'); */
-/* @import url('https://gist.githubusercontent.com/cheesits456/eebc5eadbd87f7c1195c7fec9d9bfaf0/raw/3caf6b3dd9ce1404e47f13af54c164a150eef0aa/AutoHideMembers.theme.css'); */
 
-/* - - - - [ SOLANA THEME ] - - - - */
+
+
+/* ╔═══════════════════════════════╗ */
+/* ║         SOLANA THEME          ║ */
+/* ╚═══════════════════════════════╝ */
+
 :root {
   --accent-hue: 213;
   --accent-saturation: 30%;
@@ -32,7 +42,7 @@
   --background-image-size: cover;
   --background-image-blur: 0px;
   --background-overlay-opacity: 80%;
-  --background-overlay-color-lightness: -0.5;
+  --background-overlay-color-lightness: -0.3;
   --background-hue-shift-strength: 100%;
   --window-background-image: url('https://i.pinimg.com/originals/40/bc/bb/40bcbbcd2e1906ae5bef45a0a7132455.gif');
   --window-background-image-position: center;
@@ -41,17 +51,18 @@
   --window-opacity: 95%;
   --window-blur: 0;
   --window-friends-blur: 0;
-  --window-margin: 30;
-  --window-margin-left: 10;
+  --window-margin: 8;
+  --window-margin-left: 0;
+  --window-margin-top: 34;
   --window-border-radius: 1%;
-  --window-background-lightness: -0.2;
+  --window-background-lightness: -0.4;
   --window-accent-tint-strength: 5%;
   --chat-bubble: 0;
   --text-link-hue: 213;
   --chat-text-brightness: 0;
   --home-icon: url('https://media.tenor.com/lNkVGL4mLDAAAAAC/elaina-nod.gif');
   --favorites-icon: url('https://i.imgur.com/tOBGQ8g.jpg');
-  --dock-blur: 0; 
+  --dock-blur: 1; 
   --dock-border-radius: -0.4;
   --sidebar-width: 230px;
   --members-width: 400px;
@@ -65,22 +76,119 @@
   --custom-font-primary: "";
   --custom-font-code: "";
   --enable-blur: 0;
+  
 }
 
+/* Fix Solana */
 .accountProfileCard-lbN7n- .avatar-3mTjvZ {
   transform: translate(5px, -93px);
 }
 
-/* - - - - [ SERVERCOLUNMNS THEME ] - - - - */
-:root {
-	--columns:   1;   /* default:	3  */
-	--guildsize: 45;  /* default:	50 */		
-	--guildgap:  5;	  /* default:	3  */
-	--aligndms:  1;	  /* default:	0  */
+#app-mount:not(:-webkit-full-screen) .layers-OrUESM.layers-1YQhyW {
+  margin-top: calc(var(--window-margin-top) * 1px);
+}
+
+#app-mount .sidebar-1tnWFu .container-1NXEtd {
+  background-color: rgba(31, 31, 41, 0.261);
+  box-shadow: 2px solid rgba(255, 255, 255, 0.366);
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#app-mount .panels-3wFtMD {
+  box-shadow: 0px -2px 1px rgba(9, 75, 140, 0.7);
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid rgba(0, 127, 254, 0.165);
+}
+
+/* Welcome Box */
+
+.version {
+  display: inline-block;
+  position: relative;
+  margin: 0px;
+}
+
+#app-mount:before {
+  content: "Welcome aboard Captain!";
+  display: flex;
+  justify-content: center;
+  z-index: 99999999999;
+  color: #fff;
+  background: rgb(37, 39, 51);
+  top: -7px;
+  left: 50%;
+  width: 220px;
+  height: 16px;
+  position: absolute;
+  border-radius: 7px;
+  border: 3px solid rgb(36, 33, 33);
+  padding: 5px 15px;
+  -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+  -webkit-animation: version 3s ease;
+  animation: version 3s ease;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  box-shadow: 0px 0px 6px rgb(20, 113, 207);
+}
+
+@-webkit-keyframes version {
+  from {
+      -webkit-transform: translate(-50%, -100%);
+      transform: translate(-50%, -100%);
+  }
+  20% {
+      -webkit-transform: translate(-50%, 30%);
+      transform: translate(-50%, 30%)
+  }
+  80% {
+      -webkit-transform: translate(-50%, 30%);
+      transform: translate(-50%, 30%)
+  }
+  to {
+      -webkit-transform: translate(-50%, -100%);
+      transform: translate(-50%, -100%);
+  }
+}
+
+@keyframes version {
+  from {
+      -webkit-transform: translate(-50%, -100%);
+      transform: translate(-50%, -100%);
+  }
+  20% {
+      -webkit-transform: translate(-50%, 30%);
+      transform: translate(-50%, 30%)
+  }
+  80% {
+      -webkit-transform: translate(-50%, 30%);
+      transform: translate(-50%, 30%)
+  }
+  to {
+      -webkit-transform: translate(-50%, -100%);
+      transform: translate(-50%, -100%);
+  }
 }
 
 
-/* - - - - [ AUTOHIDEMEMEBRSLIST THEME ] - - - - */
+
+/* ╔═══════════════════════════════╗ */
+/* ║        SEVRER COLUMNS         ║ */
+/* ╚═══════════════════════════════╝ */
+
+:root {
+	--columns:   1; 
+	--guildsize: 45;
+	--guildgap:  5;	
+	--aligndms:  0;
+}
+
+
+/* ╔═══════════════════════════════╗ */
+/* ║     AUTOHIDE MEMBERS SIDE     ║ */
+/* ╚═══════════════════════════════╝ */
+
 .chatContent-3KubbW {
   max-width: calc(100% - 60px);
   transition: max-width 0.5s; 
@@ -93,25 +201,27 @@
 .members-3WRCEx,
 .membersWrap-3NUR2t {
   border-radius: 12px 0 0 6px !important;
-  transition-duration: 500ms;
+  /* transition-duration: 500ms; */
   transition-property: box-shadow, min-width, width;
-  min-width: 20px;
-  width: 20px;
+  min-width: 58px;
+  width: 58px;
   z-index: 10;
-  background-color: rgba(29, 30, 33, 0.433);
+  background-color: rgba(38, 40, 45, 0.433);
 }
 
 .members-3WRCEx:hover,
 .membersWrap-3NUR2t:hover {
+  transition-duration: 500ms;
   min-width: 240px;
   width: 240px;
 }
 
 .members-3WRCEx:not(:hover),
 .membersWrap-3NUR2t:not(:hover) {
-  min-width: 60px;
-  width: 60px;
+  min-width: 58px;
+  width: 58px;
   transition-delay: 1s;
+  transition-duration: 500ms;
 }
 
 .membersWrap-3NUR2t {
@@ -126,41 +236,96 @@
 
 .membersGroup-2eiWxl {
   height: 0;
-  transition-duration: 500ms;
+  /* transition-duration: 500ms; */
   transition-property: height;
 }
 
 .members-3WRCEx:hover .membersGroup-2eiWxl {
-  transition-delay: 100ms;
   height: 40px;
 }
 
 .members-3WRCEx:not(:hover) .membersGroup-2eiWxl {
-  transition-delay: 1.4s;
+  transition-delay: 1.5s;
+  transition-duration: 500ms;
   height: 0px;
 }
 
-/* - - - - [ ANIMATIONGUILDS THEME ] - - - - */
+
+/* ╔═══════════════════════════════╗ */
+/* ║       ANIMATION GUILDS        ║ */
+/* ╚═══════════════════════════════╝ */
+
+#app-mount .scroller-3X7KbA {
+  background-color: rgba(108, 148, 156, 0.295);
+}
 
 .guilds-2JjMmN {
-  opacity: 0.6;
-  transform-origin: left center; 
-  transform: scale(0.9); 
-  margin-left: -6px;
-  margin-right: 6px;
+  z-index: 9999999999999;
+  border: none;
+  background-color: transparent !important;
 }
 
 .guilds-2JjMmN:hover {
   opacity: 1;
-  transition: 100ms;
-  transform: scale(0.94); 
-  transform-origin: center center;
+  margin-left: 0px;
+  margin-right: 0px;
+  transition-duration: 300ms;
 }
 
 .guilds-2JjMmN:not(:hover) {
-  opacity: 0.6;
-  transition: 100ms;
-  transition-delay: 3s;
-  transform: scale(0.9); 
-  margin-left: -6px;
+  opacity: 0.1;
+  margin-left: -64px;
+  margin-right: 8px;
+  transition-delay: 6s;
+  transition-duration: 500ms;
 }
+
+
+
+/* ╔═══════════════════════════════╗ */
+/* ║         TILTE CUSTOM          ║ */
+/* ╚═══════════════════════════════╝ */
+
+.wordmarkWindows-2dq6rw::after {
+  content: 'Discord - Elaina Theme';
+  display: flex;
+  position: absolute; 
+  top: -12px;
+  left: -10px; 
+  width: 1600px;
+  height: 26px;
+  justify-content: center;
+  align-items: center;
+  line-height: 16px;
+  font-family: var(--font-headline);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted-text);
+  background-color: rgb(35, 35, 35);
+  border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+.wordmarkWindows-2dq6rw::before {
+  content: '〢';
+  font-weight: bold;
+  position: absolute; 
+  top: -9.8px;
+  font-size: 24px;
+  left: 54px; 
+  color: rgb(77, 77, 77);
+  font-family: var(--font-headline);
+  z-index: 1;
+}
+
+.platform-win .typeWindows-2-g3UY .winButtonClose-3Q8ZH5.winButton-3UMjdg {
+  margin-top: -7px;
+}
+
+.platform-win .typeWindows-2-g3UY .winButton-3UMjdg {
+  margin-top: -7px;
+}
+
+/* ╔═══════════════════════════════╗ */
+/* ║        YOUR CUSTOM CSS        ║ */
+/* ╚═══════════════════════════════╝ */
+/* . . . */
