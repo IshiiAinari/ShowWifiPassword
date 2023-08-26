@@ -2,7 +2,7 @@
 /* ║                                                ELAINA THEME                                               ║ */
 /* ╠══════════════════════════╦════════════════════════════════════════════════════════════════════════════════╣ */
 /* ║ Author:                  ║ gn027c#0 (Ishii Ainari)         <914870154079391746>                           ║ */
-/* ║ Source:                  ║ https://github.com/IshiiAinari  <1.0.4>                                        ║ */
+/* ║ Source:                  ║ https://github.com/IshiiAinari  <1.0.5>                                        ║ */
 /* ║ Website:                 ║ https://linktr.ee/gn027c                                                       ║ */
 /* ╠══════════════════════════╬════════════════════════════════════════════════════════════════════════════════╣ */
 /* ║      N                   ║ Đây là theme với "Elaina" Topic, được rewrite từ Solana Theme.                 ║ */
@@ -23,6 +23,154 @@
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css');
 @import url('https://maendisease.github.io/BetterDiscordStuff/Themes/Solana/addon/mac-titlebar.css');
 @import url("https://raw.githubusercontent.com/DiscordStyles/RadialStatus/deploy/RadialStatus.theme.css");
+
+
+
+/* ╔═══════════════════════════════╗ */
+/* ║       WELCOME BACKGROUND      ║ */
+/* ╚═══════════════════════════════╝ */
+
+:root {
+  --text-shadow-level-1: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.2);
+  --text-shadow-level-2: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
+}
+
+#app-mount:before {
+  content: "";
+  position: absolute;
+  z-index: 99999999999;
+  background-color: rgb(30,30,30);
+  background-image: url("https://i.imgur.com/gLr1Q9g.gif");
+  background-size: 20% 20%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  font-size: 64px;
+  color: #fff; 
+  animation: animationtext 12s cubic-bezier(0.645, 0.045, 0.355, 1) forwards, closeBackground 1s ease 6s forwards;
+}
+
+#app-mount:after {
+  content: "Welcome aboard Captain!";
+  display: flex;
+  justify-content: center;
+  z-index: 99999999999;
+  color: #fff;
+  background: rgb(37, 39, 51);
+  top: -7px;
+  left: 50%;
+  width: 220px;
+  height: 16px;
+  position: absolute;
+  border-radius: 7px;
+  border: 3px solid rgb(36, 33, 33);
+  padding: 5px 15px;
+  transform: translate(-50%, -100%);
+  transition: transform 0.5s ease-in-out;
+  animation: animationwelcome 5s ease 10s;
+  box-shadow: 0px 0px 6px rgb(20, 113, 207);
+}
+
+@keyframes closeBackground {
+  0% {
+    transform: translateY(0%);
+  }
+  30% {
+    transform:  translateY(5%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes animationtext {  
+  0%,4% {
+    content: "|";
+  }
+  2% {
+    text-shadow: var(--text-shadow-level-1);
+  }
+  5% {
+    content: "E|";
+  }
+  6% {
+    content: "EL|";
+    
+  }
+  7% {
+    content: "ELA|";
+  }
+  8% {
+    content: "ELAI|";
+  }
+  9% {
+    content: "ELAIN|";
+  }
+  10% {
+    content: "ELAINA|";
+  }
+  11% {
+    content: "ELAINA T|";
+  }
+  12% {
+    content: "ELAINA TH|";
+  }
+  13% {
+    content: "ELAINA THE|";
+  }
+  14% {
+    content: "ELAINA THEM|";
+  }
+  15% {
+    content: "ELAINA THEME|";
+  }
+  16% {
+    content: "ELAINA THEME";
+    font-size: 64px;
+  }
+  18% {
+    text-shadow: var(--text-shadow-level-2);
+  }
+  34% {
+    text-shadow: var(--text-shadow-level-1);
+    opacity: 1;
+    font-size: 96px;
+  }
+  50% {
+    text-shadow: var(--text-shadow-level-2);
+  }
+  66% {
+    text-shadow: var(--text-shadow-level-1);
+    
+  }
+  82% {
+    text-shadow: var(--text-shadow-level-2);
+    
+  }
+  98% {
+    text-shadow: var(--text-shadow-level-1);
+  }
+}
+
+@keyframes animationwelcome {
+  from {
+      transform: translate(-50%, -100%);
+  }
+  20% {
+      transform: translate(-50%, 40%)
+  }
+  80% {
+      transform: translate(-50%, 40%)
+  }
+  to {
+      transform: translate(-50%, -100%);
+  }
+}
 
 
 
@@ -79,7 +227,11 @@
   
 }
 
-/* Fix Solana */
+
+/* ╔═══════════════════════════════╗ */
+/* ║       FIX SOLANA THEME        ║ */
+/* ╚═══════════════════════════════╝ */
+
 .accountProfileCard-lbN7n- .avatar-3mTjvZ {
   transform: translate(5px, -93px);
 }
@@ -101,77 +253,16 @@
   border: 1px solid rgba(0, 127, 254, 0.165);
 }
 
-/* Welcome Box */
-
-.version {
-  display: inline-block;
-  position: relative;
-  margin: 0px;
-}
-
-#app-mount:before {
-  content: "Welcome aboard Captain!";
+.bar-wDIGjg:not(.mentionsBar-DpLHCy) {
   display: flex;
   justify-content: center;
-  z-index: 99999999999;
-  color: #fff;
-  background: rgb(37, 39, 51);
-  top: -7px;
-  left: 50%;
-  width: 220px;
-  height: 16px;
-  position: absolute;
-  border-radius: 7px;
-  border: 3px solid rgb(36, 33, 33);
-  padding: 5px 15px;
-  -webkit-transform: translate(-50%, -100%);
-  transform: translate(-50%, -100%);
-  -webkit-animation: version 3s ease;
-  animation: version 3s ease;
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
-  box-shadow: 0px 0px 6px rgb(20, 113, 207);
+  align-content: center;
+  background-color: rgba(200, 68, 123, 0.384);
+  right: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.448);
+  border-radius: 8px;
+  width: calc(100% + 30px);
 }
-
-@-webkit-keyframes version {
-  from {
-      -webkit-transform: translate(-50%, -100%);
-      transform: translate(-50%, -100%);
-  }
-  20% {
-      -webkit-transform: translate(-50%, 30%);
-      transform: translate(-50%, 30%)
-  }
-  80% {
-      -webkit-transform: translate(-50%, 30%);
-      transform: translate(-50%, 30%)
-  }
-  to {
-      -webkit-transform: translate(-50%, -100%);
-      transform: translate(-50%, -100%);
-  }
-}
-
-@keyframes version {
-  from {
-      -webkit-transform: translate(-50%, -100%);
-      transform: translate(-50%, -100%);
-  }
-  20% {
-      -webkit-transform: translate(-50%, 30%);
-      transform: translate(-50%, 30%)
-  }
-  80% {
-      -webkit-transform: translate(-50%, 30%);
-      transform: translate(-50%, 30%)
-  }
-  to {
-      -webkit-transform: translate(-50%, -100%);
-      transform: translate(-50%, -100%);
-  }
-}
-
-
 
 /* ╔═══════════════════════════════╗ */
 /* ║        SEVRER COLUMNS         ║ */
@@ -183,6 +274,7 @@
 	--guildgap:  5;	
 	--aligndms:  0;
 }
+
 
 
 /* ╔═══════════════════════════════╗ */
@@ -251,6 +343,7 @@
 }
 
 
+
 /* ╔═══════════════════════════════╗ */
 /* ║       ANIMATION GUILDS        ║ */
 /* ╚═══════════════════════════════╝ */
@@ -260,24 +353,24 @@
 }
 
 .guilds-2JjMmN {
-  z-index: 9999999999999;
+  z-index: 999;
   border: none;
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 .guilds-2JjMmN:hover {
   opacity: 1;
   margin-left: 0px;
   margin-right: 0px;
-  transition-duration: 300ms;
+  transition-delay: 50ms;
 }
 
 .guilds-2JjMmN:not(:hover) {
   opacity: 0.1;
   margin-left: -64px;
-  margin-right: 8px;
-  transition-delay: 6s;
-  transition-duration: 500ms;
+  margin-right: 3px;
+  transition-delay: 5s;
+  transition-duration: 50ms;
 }
 
 
@@ -309,7 +402,7 @@
   content: '〢';
   font-weight: bold;
   position: absolute; 
-  top: -9.8px;
+  top: -10px;
   font-size: 24px;
   left: 54px; 
   color: rgb(77, 77, 77);
@@ -324,6 +417,8 @@
 .platform-win .typeWindows-2-g3UY .winButton-3UMjdg {
   margin-top: -7px;
 }
+
+
 
 /* ╔═══════════════════════════════╗ */
 /* ║        YOUR CUSTOM CSS        ║ */
