@@ -4,7 +4,7 @@
 
 - Nếu bạn chưa biết mình đã bật lên hay chưa, hãy kiểm tra ở Thanh taskbar -> Show hidden icons -> Có hiển thị icon của phần mềm.
   
-- Bạn có thể để phần mềm này khởi động cùng window bằng cách nhấn Win + R -> Nhập 'shell:startup' -> ném HideDesktopIcon.exe vào trong.
+- Bạn có thể để phần mềm này khởi động cùng window bằng cách nhấn Win + R -> Nhập 'shell:startup' -> Ném phần mềm HideDesktopIcon.exe vào trong.
 
 # Shortcut key
 
